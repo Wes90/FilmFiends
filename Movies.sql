@@ -18,12 +18,12 @@ SELECT * FROM movies_cleaned
 SELECT * FROM meta_data_cleaned_final
 
 
-SELECT meta_data_cleaned_final.Title, meta_data_cleaned_final.Year, meta_data_cleaned_final.Budget, meta_data_cleaned_final.Average_Vote, movies_cleaned.title, movies_cleaned.gross_income
+SELECT meta_data_cleaned_final.Title, meta_data_cleaned_final.Year, meta_data_cleaned_final.Budget, meta_data_cleaned_final.Average_Vote, movies_cleaned.gross_income
 FROM meta_data_cleaned_final JOIN movies_cleaned 
 ON meta_data_cleaned_final.Title = movies_cleaned.title
 ORDER BY average_vote DESC limit 100;
 
-SELECT meta_data_cleaned_final.Title, meta_data_cleaned_final.Year, meta_data_cleaned_final.Budget, meta_data_cleaned_final.Average_Vote, movies_cleaned.title, movies_cleaned.gross_income
+SELECT meta_data_cleaned_final.Title, meta_data_cleaned_final.Year, meta_data_cleaned_final.Budget, meta_data_cleaned_final.Average_Vote, movies_cleaned.gross_income
 FROM meta_data_cleaned_final JOIN movies_cleaned 
 ON meta_data_cleaned_final.Title = movies_cleaned.title
 ORDER BY gross_income DESC limit 100;
